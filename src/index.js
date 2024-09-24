@@ -26,6 +26,11 @@ app.use((req, res) => {
 const server = createServer();
 
 server.on("request", (req, res) => {
+  console.log("New request received:");
+  console.log(`\tMethod: ${req.method}`);
+  console.log(`\tURL: ${req.url}`);
+  console.log("\tHeaders:");
+  console.log(req.headers);
   res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
   res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
   app(req, res);
