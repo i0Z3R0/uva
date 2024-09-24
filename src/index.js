@@ -70,4 +70,7 @@ function shutdown() {
   process.exit(0);
 }
 
-server.listen(8080, '0.0.0.0');
+// server.listen(8080, '0.0.0.0');
+server.listen({
+  port,
+});
